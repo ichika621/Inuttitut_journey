@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Inuttut Journey — Learn the Labrador Inuit Language</title>
+  <meta name="description" content="A story-driven game for learning Inuttut (Labrador Inuit / Nunatsiavut), built from the Labrador Virtual Museum English-Inuttut Dictionary." />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <header class="topbar">
+    <button class="brand" id="homeBtn" aria-label="Go to chapters">
+      <span class="brand-mark" aria-hidden="true">❄</span>
+      <span class="brand-text">Inuttut Journey</span>
+    </button>
+    <div class="hud" id="hud"></div>
+    <nav class="topnav" aria-label="Main">
+      <button data-nav="map" class="nav-btn">Map</button>
+      <button data-nav="guide" class="nav-btn">Field Guide</button>
+      <button data-nav="cards" class="nav-btn">Culture</button>
+      <button data-nav="about" class="nav-btn">About</button>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"><!-- screens render here --></main>
+
+  <footer class="sitefoot">
+    <p>
+      Vocabulary from the
+      <a href="https://www.labradorvirtualmuseum.ca/english-inuttut.htm" target="_blank" rel="noopener">Labrador Virtual Museum — English-Inuttut Dictionary</a>.
+      Inuttut (Labrador Inuit / Nunatsiavut). A learning prototype — tales should be reviewed with the
+      Nunatsiavut Government / Torngâsok Cultural Centre before publishing.
+    </p>
+  </footer>
+
+  <!-- Data. Canonical JSON is data/dictionary.json, data/nouns.json & data/story.json;
+       these .js wrappers let the game run from file:// without a server.
+       The ?v= tokens are cache-busters — bump them when you rebuild the data/JS. -->
+  <script src="data/dictionary.js?v=3"></script>
+  <script src="data/nouns.js?v=3"></script>
+  <script src="data/story.js?v=3"></script>
+  <script src="js/audio.js?v=3"></script>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>
